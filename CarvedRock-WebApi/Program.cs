@@ -11,7 +11,9 @@ builder.Services.AddCors(options =>
             .AllowAnyOrigin()
                 // .WithOrigins("https://localhost:7220", "http://localhost:7220", "https://broodjes.myschool.be", "http://broodjes.myschool.be")
                 .AllowAnyHeader()
-                .AllowAnyMethod());
+                .AllowAnyMethod()
+                .AllowCredentials()
+                );
     //.AddPolicy("OpenCorsPolicy", builder =>
     //    builder
     //        .WithOrigins("https://localhost:7220", "http://localhost:7220", "https://broodjes.myschool.be", "http://broodjes.myschool.be")
@@ -37,6 +39,7 @@ app.UseSwaggerUI();
 // app.UseHttpsRedirection();
 
 // app.UseCors("OpenCorsPolicy");
+app.UseCors();
 
 app.UseAuthorization();
 
