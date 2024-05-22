@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CarvedRock_WebApi.Controllers
 {
-    [EnableCors("OpenCorsPolicy")]
+    //[EnableCors("OpenCorsPolicy")]
+    [EnableCors]
     [ApiController]
     [Route("[controller]")]
     public class ProductController : ControllerBase
