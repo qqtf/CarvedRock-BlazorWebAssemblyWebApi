@@ -19,7 +19,7 @@ public class ProductApiService : IProductApiService
         WebAssemblyHttpRequestMessageExtensions.SetBrowserRequestMode(HttpRequestMessage, BrowserRequestMode.NoCors);
 
         var response = await httpClient.SendAsync(HttpRequestMessage);
-        response.EnsureSuccessStatusCode();
+        // response.EnsureSuccessStatusCode();
         var products = await
             response.Content.ReadFromJsonAsync<IEnumerable<Product>>();
 
@@ -36,7 +36,7 @@ public class ProductApiService : IProductApiService
         WebAssemblyHttpRequestMessageExtensions.SetBrowserRequestMode(HttpRequestMessage, BrowserRequestMode.NoCors);
 
         var response = await httpClient.SendAsync(HttpRequestMessage);
-        response.EnsureSuccessStatusCode();
+        // response.EnsureSuccessStatusCode();
         return await response.Content.ReadFromJsonAsync<Product>();
     }
 }
