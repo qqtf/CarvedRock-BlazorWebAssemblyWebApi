@@ -8,15 +8,15 @@ builder.Services.AddCors(options =>
     options
     .AddDefaultPolicy(builder =>
             builder
-            .AllowAnyOrigin()
-                // .WithOrigins("https://localhost:7220", "http://localhost:7220", "https://broodjes.myschool.be", "http://broodjes.myschool.be")
+                //.AllowAnyOrigin()
+                .WithOrigins("https://localhost:7220", "http://localhost:7220", "https://broodjes.sintmaartencampus.be", "http://broodjes.sintmaartencampus.be")
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 //.AllowCredentials()
                 );
     //.AddPolicy("OpenCorsPolicy", builder =>
     //    builder
-    //        .WithOrigins("https://localhost:7220", "http://localhost:7220", "https://broodjes.myschool.be", "http://broodjes.myschool.be")
+    //        .WithOrigins("https://localhost:7220", "http://localhost:7220", "https://broodjes.sintmaartencampus.be", "http://broodjes.sintmaartencampus.be")
     //        .AllowAnyHeader()
     //        .AllowAnyMethod());
 });
