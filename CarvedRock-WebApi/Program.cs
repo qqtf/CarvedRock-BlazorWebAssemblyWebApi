@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
                 // .WithOrigins("https://localhost:7220", "http://localhost:7220", "https://broodjes.myschool.be", "http://broodjes.myschool.be")
                 .AllowAnyHeader()
                 .AllowAnyMethod()
-                .AllowCredentials()
+                //.AllowCredentials()
                 );
     //.AddPolicy("OpenCorsPolicy", builder =>
     //    builder
